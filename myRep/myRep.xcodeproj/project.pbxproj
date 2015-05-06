@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1566941AF97D07008688A2 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1566931AF97D07008688A2 /* Settings.m */; };
 		BC54E30A1AF93BF500B8A8D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54E3091AF93BF500B8A8D7 /* main.m */; };
 		BC54E30D1AF93BF500B8A8D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54E30C1AF93BF500B8A8D7 /* AppDelegate.m */; };
 		BC54E3101AF93BF500B8A8D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54E30F1AF93BF500B8A8D7 /* ViewController.m */; };
@@ -14,6 +15,8 @@
 		BC54E3151AF93BF500B8A8D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC54E3141AF93BF500B8A8D7 /* Images.xcassets */; };
 		BC54E3181AF93BF500B8A8D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC54E3161AF93BF500B8A8D7 /* LaunchScreen.xib */; };
 		BC54E3241AF93BF500B8A8D7 /* myRepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54E3231AF93BF500B8A8D7 /* myRepTests.m */; };
+		BC54E3341AF9441F00B8A8D7 /* repController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54E3331AF9441F00B8A8D7 /* repController.m */; };
+		BC54E3371AF9445900B8A8D7 /* Rep.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54E3361AF9445900B8A8D7 /* Rep.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC1566921AF97D07008688A2 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		BC1566931AF97D07008688A2 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		BC54E3041AF93BF500B8A8D7 /* myRep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myRep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC54E3081AF93BF500B8A8D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC54E3091AF93BF500B8A8D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +45,10 @@
 		BC54E31D1AF93BF500B8A8D7 /* myRepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myRepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC54E3221AF93BF500B8A8D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC54E3231AF93BF500B8A8D7 /* myRepTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myRepTests.m; sourceTree = "<group>"; };
+		BC54E3321AF9441F00B8A8D7 /* repController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = repController.h; sourceTree = "<group>"; };
+		BC54E3331AF9441F00B8A8D7 /* repController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = repController.m; sourceTree = "<group>"; };
+		BC54E3351AF9445900B8A8D7 /* Rep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rep.h; sourceTree = "<group>"; };
+		BC54E3361AF9445900B8A8D7 /* Rep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rep.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +90,13 @@
 		BC54E3061AF93BF500B8A8D7 /* myRep */ = {
 			isa = PBXGroup;
 			children = (
+				BC54E3111AF93BF500B8A8D7 /* Main.storyboard */,
 				BC54E30B1AF93BF500B8A8D7 /* AppDelegate.h */,
 				BC54E30C1AF93BF500B8A8D7 /* AppDelegate.m */,
 				BC54E30E1AF93BF500B8A8D7 /* ViewController.h */,
 				BC54E30F1AF93BF500B8A8D7 /* ViewController.m */,
-				BC54E3111AF93BF500B8A8D7 /* Main.storyboard */,
-				BC54E3141AF93BF500B8A8D7 /* Images.xcassets */,
-				BC54E3161AF93BF500B8A8D7 /* LaunchScreen.xib */,
+				BC54E3311AF943F600B8A8D7 /* CONTROLLER */,
+				BC54E32D1AF93D8200B8A8D7 /* MODEL */,
 				BC54E3071AF93BF500B8A8D7 /* Supporting Files */,
 			);
 			path = myRep;
@@ -96,6 +105,8 @@
 		BC54E3071AF93BF500B8A8D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC54E3141AF93BF500B8A8D7 /* Images.xcassets */,
+				BC54E3161AF93BF500B8A8D7 /* LaunchScreen.xib */,
 				BC54E3081AF93BF500B8A8D7 /* Info.plist */,
 				BC54E3091AF93BF500B8A8D7 /* main.m */,
 			);
@@ -117,6 +128,26 @@
 				BC54E3221AF93BF500B8A8D7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC54E32D1AF93D8200B8A8D7 /* MODEL */ = {
+			isa = PBXGroup;
+			children = (
+				BC54E3351AF9445900B8A8D7 /* Rep.h */,
+				BC54E3361AF9445900B8A8D7 /* Rep.m */,
+			);
+			name = MODEL;
+			sourceTree = "<group>";
+		};
+		BC54E3311AF943F600B8A8D7 /* CONTROLLER */ = {
+			isa = PBXGroup;
+			children = (
+				BC54E3321AF9441F00B8A8D7 /* repController.h */,
+				BC54E3331AF9441F00B8A8D7 /* repController.m */,
+				BC1566921AF97D07008688A2 /* Settings.h */,
+				BC1566931AF97D07008688A2 /* Settings.m */,
+			);
+			name = CONTROLLER;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC54E3341AF9441F00B8A8D7 /* repController.m in Sources */,
 				BC54E3101AF93BF500B8A8D7 /* ViewController.m in Sources */,
+				BC1566941AF97D07008688A2 /* Settings.m in Sources */,
+				BC54E3371AF9445900B8A8D7 /* Rep.m in Sources */,
 				BC54E30D1AF93BF500B8A8D7 /* AppDelegate.m in Sources */,
 				BC54E30A1AF93BF500B8A8D7 /* main.m in Sources */,
 			);
@@ -418,6 +452,7 @@
 				BC54E3291AF93BF500B8A8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC54E32A1AF93BF500B8A8D7 /* Build configuration list for PBXNativeTarget "myRepTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +461,7 @@
 				BC54E32C1AF93BF500B8A8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
