@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 weeblu.co llc. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "repViewController.h"
 
-@interface ViewController ()
+@interface repViewController ()
 
 @end
 
-@implementation ViewController
+@implementation repViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

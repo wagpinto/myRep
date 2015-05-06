@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "repController.h"
 
-@interface ViewController : UIViewController
+@interface repViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *searchSegmentControlle;
 
 @end
 
