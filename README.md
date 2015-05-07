@@ -3,6 +3,7 @@
 This project is to allow the user to get his representative information by State, Zip or Name.
 
 The project objectives are:
+
 1. Use MVC pattern;
 2. Connect and get information from a JSON API given by RAIN;
 3. Manage the url connection;
