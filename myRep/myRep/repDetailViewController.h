@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "repController.h"
 
 @interface repDetailViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
@@ -17,5 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *repWebsiteLabel;
 @property (weak, nonatomic) IBOutlet UILabel *repPartyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *repDistrictLabel;
+
+@property (nonatomic, strong) Rep *rep;
+
+- (void)updateViewWithInfo:(Rep *)rep;
 
 @end

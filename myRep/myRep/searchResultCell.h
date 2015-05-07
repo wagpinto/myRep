@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *searchResultLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *partyImageView;
+@property (weak, nonatomic) IBOutlet UILabel *partyLabel;
 
 @end

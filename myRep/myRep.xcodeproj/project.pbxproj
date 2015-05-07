@@ -78,14 +78,30 @@
 		BC15669B1AFAB9A2008688A2 /* VIEW-CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
-				BC1566951AFAAD33008688A2 /* repDetailViewController.h */,
-				BC1566961AFAAD33008688A2 /* repDetailViewController.m */,
+				BC1566A01AFAFCD6008688A2 /* MAIN */,
+				BC1566A11AFAFCE9008688A2 /* DETAIL */,
+			);
+			name = "VIEW-CONTROLLERS";
+			sourceTree = "<group>";
+		};
+		BC1566A01AFAFCD6008688A2 /* MAIN */ = {
+			isa = PBXGroup;
+			children = (
 				BC54E30E1AF93BF500B8A8D7 /* repViewController.h */,
 				BC54E30F1AF93BF500B8A8D7 /* repViewController.m */,
 				BC1566981AFAADD3008688A2 /* searchResultCell.h */,
 				BC1566991AFAADD3008688A2 /* searchResultCell.m */,
 			);
-			name = "VIEW-CONTROLLERS";
+			name = MAIN;
+			sourceTree = "<group>";
+		};
+		BC1566A11AFAFCE9008688A2 /* DETAIL */ = {
+			isa = PBXGroup;
+			children = (
+				BC1566951AFAAD33008688A2 /* repDetailViewController.h */,
+				BC1566961AFAAD33008688A2 /* repDetailViewController.m */,
+			);
+			name = DETAIL;
 			sourceTree = "<group>";
 		};
 		BC54E2FB1AF93BF500B8A8D7 = {
