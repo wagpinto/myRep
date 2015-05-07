@@ -25,7 +25,8 @@ static NSString *const senByState = @"http://whoismyrepresentative.com/getall_se
     });
     return sharedInstance;
 }
-
+#pragma mark - API METHODS - JSON
+//get Senators information from the JSON:
 -(void)getSenatorWithInfo:(NSString *)info andSearchType:(Search)searchType completion:(void (^)(BOOL))completion {
     self.loadSenatorsArray = [NSMutableArray new];
     NSURL *url;
@@ -52,9 +53,12 @@ static NSString *const senByState = @"http://whoismyrepresentative.com/getall_se
     if (array) {
         self.loadSenatorsArray = senatorArray;
         completion (YES);
+    }else {
+        completion (NO);
     }
     
 }
+//get Representatives information from the JSON:
 - (void)getRepresentativeWithInfo:(NSString *)info andSearchType:(Search)searchType completion:(void (^)(BOOL))completion {
     self.loadRepArray = [NSMutableArray new];
     NSURL *url;
@@ -81,6 +85,8 @@ static NSString *const senByState = @"http://whoismyrepresentative.com/getall_se
     if (array) {
         self.loadRepArray = repArray;
         completion (YES);
+    }else {
+        completion (NO);
     }
 }
 @end

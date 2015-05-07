@@ -10,6 +10,7 @@
 		BC1566941AF97D07008688A2 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1566931AF97D07008688A2 /* Settings.m */; };
 		BC1566971AFAAD33008688A2 /* repDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1566961AFAAD33008688A2 /* repDetailViewController.m */; };
 		BC15669A1AFAADD3008688A2 /* searchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1566991AFAADD3008688A2 /* searchResultCell.m */; };
+		BC1566A41AFBE6A8008688A2 /* APRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1566A31AFBE6A8008688A2 /* APRoundedButton.m */; };
 		BC54E30A1AF93BF500B8A8D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54E3091AF93BF500B8A8D7 /* main.m */; };
 		BC54E30D1AF93BF500B8A8D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54E30C1AF93BF500B8A8D7 /* AppDelegate.m */; };
 		BC54E3101AF93BF500B8A8D7 /* repViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54E30F1AF93BF500B8A8D7 /* repViewController.m */; };
@@ -38,6 +39,8 @@
 		BC1566961AFAAD33008688A2 /* repDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = repDetailViewController.m; sourceTree = "<group>"; };
 		BC1566981AFAADD3008688A2 /* searchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchResultCell.h; sourceTree = "<group>"; };
 		BC1566991AFAADD3008688A2 /* searchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchResultCell.m; sourceTree = "<group>"; };
+		BC1566A21AFBE6A8008688A2 /* APRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRoundedButton.h; sourceTree = "<group>"; };
+		BC1566A31AFBE6A8008688A2 /* APRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRoundedButton.m; sourceTree = "<group>"; };
 		BC54E3041AF93BF500B8A8D7 /* myRep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myRep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC54E3081AF93BF500B8A8D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC54E3091AF93BF500B8A8D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 			children = (
 				BC54E3141AF93BF500B8A8D7 /* Images.xcassets */,
 				BC54E3161AF93BF500B8A8D7 /* LaunchScreen.xib */,
+				BC1566A21AFBE6A8008688A2 /* APRoundedButton.h */,
+				BC1566A31AFBE6A8008688A2 /* APRoundedButton.m */,
 				BC54E3081AF93BF500B8A8D7 /* Info.plist */,
 				BC54E3091AF93BF500B8A8D7 /* main.m */,
 			);
@@ -289,6 +294,7 @@
 				BC1566941AF97D07008688A2 /* Settings.m in Sources */,
 				BC1566971AFAAD33008688A2 /* repDetailViewController.m in Sources */,
 				BC15669A1AFAADD3008688A2 /* searchResultCell.m in Sources */,
+				BC1566A41AFBE6A8008688A2 /* APRoundedButton.m in Sources */,
 				BC54E3371AF9445900B8A8D7 /* Rep.m in Sources */,
 				BC54E30D1AF93BF500B8A8D7 /* AppDelegate.m in Sources */,
 				BC54E30A1AF93BF500B8A8D7 /* main.m in Sources */,

@@ -21,30 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.searchSegmentControlle.selectedSegmentIndex = 2;
+//    self.searchSegmentControlle.selectedSegmentIndex = 2;
 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 
-}
-#pragma mark - Segues
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"repSelected"]) {
-        NSIndexPath *indexPath = [self.tableview indexPathForCell:sender];
-        repDetailViewController *detailViewController = [segue destinationViewController];
-        
-        switch (indexPath.section) {
-            case 0:
-                [detailViewController updateViewWithInfo:[repController sharedInstance].loadRepArray[indexPath.row]];
-                break;
-            default:
-                [detailViewController updateViewWithInfo:[repController sharedInstance].loadSenatorsArray[indexPath.row]];
-                break;
-        }
-    }
 }
 
 - (IBAction)selectSearchType:(id)sender {
@@ -54,15 +37,21 @@
     }else {
         switch (self.searchSegmentControlle.selectedSegmentIndex) {
             case 0:
+                [self.searchTextField resignFirstResponder];
                 [self getRepresentative:self.searchTextField.text andType:SearchByZip];
+                [self.tableview reloadData];
                 break;
             case 1:
+                [self.searchTextField resignFirstResponder];
                 [self getRepresentative:self.searchTextField.text andType:SearchByName];
                 [self getSenator:self.searchTextField.text andType:SearchByName];
+                [self.tableview reloadData];
                 break;
             case 2:
+                [self.searchTextField resignFirstResponder];
                 [self getRepresentative:self.searchTextField.text andType:SearchByState];
                 [self getSenator:self.searchTextField.text andType:SearchByState];
+                [self.tableview reloadData];
                 break;
         }
     }
@@ -168,10 +157,12 @@
 
     if ([rep.repParty isEqual: @"R"]) {
         cell.partyImageView.image = [UIImage imageNamed:@"Republican"];
-        cell.partyLabel.backgroundColor = [UIColor blueColor];
+        cell.partyLabel.backgroundColor = [UIColor redColor];
+        cell.partyLabel.text = @"Republican";
     }else {
         cell.partyImageView.image = [UIImage imageNamed:@"Democratic"];
-        cell.partyLabel.backgroundColor = [UIColor redColor];
+        cell.partyLabel.backgroundColor = [UIColor blueColor];
+        cell.partyLabel.text = @"Democrat";
     }
         
     return cell;
@@ -180,6 +171,23 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Segues
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"repSelected"]) {
+        NSIndexPath *indexPath = [self.tableview indexPathForCell:sender];
+        repDetailViewController *detailViewController = [segue destinationViewController];
+        
+        switch (indexPath.section) {
+            case 0:
+                [detailViewController updateViewWithInfo:[repController sharedInstance].loadRepArray[indexPath.row]];
+                break;
+            default:
+                [detailViewController updateViewWithInfo:[repController sharedInstance].loadSenatorsArray[indexPath.row]];
+                break;
+        }
+    }
 }
 
 @end
