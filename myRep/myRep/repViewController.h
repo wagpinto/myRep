@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "repController.h"
+#import "searchResultCell.h"
+#import "repController.h"
+#import "Settings.h"
 
-@interface repViewController : UIViewController
+@interface repViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *searchSegmentControlle;
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 @end
 

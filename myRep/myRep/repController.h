@@ -13,10 +13,10 @@
 @interface repController : NSObject
 
 + (repController *)sharedInstance;
-- (void)getRepresentativeWithInfo:(NSString *)info andSearchType:(Search)searchType completion:(void (^)(BOOL))completion;
-- (void)getSenatorWithInfo:(NSString *)info andSearchType:(Search)searchType completion:(void (^)(BOOL))completion;
+- (void)getRepresentativeWithInfo:(NSString *)info andSearchType:(Search)searchType completion:(void (^)(BOOL success))completion;
+- (void)getSenatorWithInfo:(NSString *)info andSearchType:(Search)searchType completion:(void (^)(BOOL success))completion;
 
-@property (nonatomic, strong) NSArray *representativeArray;
-@property (nonatomic, strong) NSArray *senatorsArray;
+@property (nonatomic, strong) NSArray *loadRepArray;
+@property (nonatomic, strong) NSArray *loadSenatorsArray;
 
 @end

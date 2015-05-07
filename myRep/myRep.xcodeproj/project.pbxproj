@@ -75,6 +75,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC15669B1AFAB9A2008688A2 /* VIEW-CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				BC1566951AFAAD33008688A2 /* repDetailViewController.h */,
+				BC1566961AFAAD33008688A2 /* repDetailViewController.m */,
+				BC54E30E1AF93BF500B8A8D7 /* repViewController.h */,
+				BC54E30F1AF93BF500B8A8D7 /* repViewController.m */,
+				BC1566981AFAADD3008688A2 /* searchResultCell.h */,
+				BC1566991AFAADD3008688A2 /* searchResultCell.m */,
+			);
+			name = "VIEW-CONTROLLERS";
+			sourceTree = "<group>";
+		};
 		BC54E2FB1AF93BF500B8A8D7 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +112,7 @@
 				BC54E3111AF93BF500B8A8D7 /* Main.storyboard */,
 				BC54E30B1AF93BF500B8A8D7 /* AppDelegate.h */,
 				BC54E30C1AF93BF500B8A8D7 /* AppDelegate.m */,
-				BC54E30E1AF93BF500B8A8D7 /* repViewController.h */,
-				BC54E30F1AF93BF500B8A8D7 /* repViewController.m */,
-				BC1566951AFAAD33008688A2 /* repDetailViewController.h */,
-				BC1566961AFAAD33008688A2 /* repDetailViewController.m */,
-				BC1566981AFAADD3008688A2 /* searchResultCell.h */,
-				BC1566991AFAADD3008688A2 /* searchResultCell.m */,
+				BC15669B1AFAB9A2008688A2 /* VIEW-CONTROLLERS */,
 				BC54E3311AF943F600B8A8D7 /* CONTROLLER */,
 				BC54E32D1AF93D8200B8A8D7 /* MODEL */,
 				BC54E3071AF93BF500B8A8D7 /* Supporting Files */,

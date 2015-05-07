@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface searchResultCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *searchResultLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *partyImageView;
 

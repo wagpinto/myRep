@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface repDetailViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *repNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *repAddressLabal;

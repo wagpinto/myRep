@@ -8,6 +8,12 @@
 
 #import "repController.h"
 
+static NSString *const repbyState = @"http://whoismyrepresentative.com/getall_reps_bystate.php?state=%@&output=json";
+static NSString *const repbyZip = @"http:whoismyrepresentative.com/getall_mems.php?zip=%@&output=json";
+static NSString *const repbyName = @"http://whoismyrepresentative.com/getall_reps_byname.php?name=%@&output=json";
+static NSString *const senByName = @"http://whoismyrepresentative.com/getall_sens_byname.php?name=%@&output=json";
+static NSString *const senByState = @"http://whoismyrepresentative.com/getall_sens_bystate.php?state=%@&output=json";
+
 @implementation repController
 
 + (repController *)sharedInstance {
@@ -21,52 +27,60 @@
 }
 
 -(void)getSenatorWithInfo:(NSString *)info andSearchType:(Search)searchType completion:(void (^)(BOOL))completion {
-    self.senatorsArray = [NSMutableArray new];
+    self.loadSenatorsArray = [NSMutableArray new];
     NSURL *url;
     
     switch (searchType) {
         case SearchByName:
-            url = [NSURL URLWithString:[NSString stringWithFormat:@"http://whoismyrepresentative.com/getall_sens_byname.php?name=%@&output=json", info]];
+            url = [NSURL URLWithString:[NSString stringWithFormat:senByName, info]];
             break;
         case SearchByState:
-            url = [NSURL URLWithString:[NSString stringWithFormat:@"http://whoismyrepresentative.com/getall_sens_bystate.php?state=%@&output=json", info]];
+            url = [NSURL URLWithString:[NSString stringWithFormat:senByState, info]];
             break;
         case SearchByZip:
             break;
     }
     NSError *error;
-    NSArray *array = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:url] options:NSJSONReadingAllowFragments error:&error];
-    
+    NSArray *array = [[NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:url] options:NSJSONReadingAllowFragments error:&error]objectForKey:@"results"];
     NSMutableArray *senatorArray = [NSMutableArray new];
+
     for (NSDictionary *dictionary in array) {
         Rep *senator = [[Rep alloc]initWithDictionaryOfReps:dictionary];
         [senatorArray addObject:senator];
         NSLog(@"%@",senator);
     }
+    if (array) {
+        self.loadSenatorsArray = senatorArray;
+        completion (YES);
+    }
+    
 }
 - (void)getRepresentativeWithInfo:(NSString *)info andSearchType:(Search)searchType completion:(void (^)(BOOL))completion {
-    self.representativeArray = [NSMutableArray new];
+    self.loadRepArray = [NSMutableArray new];
     NSURL *url;
     
     switch (searchType) {
         case SearchByName:
-            url = [NSURL URLWithString:[NSString stringWithFormat:@"http:whoismyrepresentative.com/getall_mems.php?zip=%@&output=json", info]];
+            url = [NSURL URLWithString:[NSString stringWithFormat:repbyName, info]];
             break;
         case SearchByZip:
-            url = [NSURL URLWithString:[NSString stringWithFormat:@"http://whoismyrepresentative.com/getall_reps_bystate.php?state=%@&output=json", info]];
+            url = [NSURL URLWithString:[NSString stringWithFormat:repbyZip, info]];
             break;
         case SearchByState:
-            url = [NSURL URLWithString:[NSString stringWithFormat:@"http://whoismyrepresentative.com/getall_reps_byname.php?name=%@&output=json", info]];
+            url = [NSURL URLWithString:[NSString stringWithFormat:repbyState, info]];
             break;
     }
     NSError *error;
     NSArray *array = [[NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:url] options:NSJSONReadingAllowFragments error:&error]objectForKey:@"results"];
-    
     NSMutableArray *repArray = [NSMutableArray new];
+    
     for (NSDictionary *dictionary in array) {
         Rep *representative = [[Rep alloc]initWithDictionaryOfReps:dictionary];
         [repArray addObject:representative];
-        NSLog(@"%@",representative);
+    }
+    if (array) {
+        self.loadRepArray = repArray;
+        completion (YES);
     }
 }
 @end
